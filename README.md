@@ -1,7 +1,7 @@
 # caj2pdf-actions
 #### 无需配置环境，使用Github Actions一键转换！  
 #### 搭配[ActionArtifacts.Workers](https://github.com/qinlili23333/ActionArtifacts.Workers)项目可以更方便的下载成品！  
-#### 这里有一个转换完成的[演示文件](https://ow365.cn/?i=28657&ssl=1&furl=https://artifacts.qinlili.bid/proxylink?owner=qinlili23333&repo=caj2pdf-actions)，使用OfficeWeb365在线预览
+#### 这里有一个转换完成的[演示文件](https://ow365.cn/?i=28657&ssl=1&furl=https://artifacts.qinlili.bid/directlink?owner=qinlili23333&repo=caj2pdf-actions)，使用OfficeWeb365在线预览
 
 ## 使用方法
 #### [查看有图片的手把手教学](https://a.scene.meih5.net/s/PLOnv7sd)
@@ -32,7 +32,7 @@
 
 ## How far we've come
 
-知网下载到的后缀为 `caj` 的文件内部结构其实分为两类：CAJ 格式和 HN 格式（受考察样本所限可能还有更多）。目前本项目支持 CAJ 格式文件的转换，HN 格式的转换未完善，并且需要建立两个新的共享库（除了Microsoft Windows：我们提供Microsoft Windows 32-bit/64-bit DLLs），详情如下：
+知网下载到的后缀为 `caj` 的文件内部结构其实分为两类：CAJ 格式和 HN 格式（受考察样本所限可能还有更多）。目前本项目支持 CAJ 格式文件的转换，HN 格式的转换未完善，并且需要建立两个新的共享库（除了Microsoft Windows：我们提供Microsoft Windows 32-bit/64-bit DLLs, Mac OS users can download from [extra libs build](https://github.com/caj2pdf/caj2pdf-extra-libs/releases/tag/BUILD-0.1), and `chmod +x ...`)，详情如下：
 
 ```
 cc -Wall -fPIC --shared -o libjbigdec.so jbigdec.cc JBigDecode.cc

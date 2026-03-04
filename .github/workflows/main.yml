@@ -5,18 +5,18 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.4
+      uses: actions/checkout@v4
     - name: preload env cmd
       shell: cmd
       run: |
        pip install pypdf2
        pip install imagesize
-       curl https://mupdf.com/downloads/archive/mupdf-1.18.0-windows.zip -o mupdf.zip -L
+       curl https://mupdf.com/downloads/archive/mupdf-1.24.0-windows.zip -o mupdf.zip -L
     - name: preload env ps
       shell: powershell
       run: |
        Expand-Archive mupdf.zip -DestinationPath .\
-       move mupdf-1.18.0-windows\mutool.exe .\
+       move mupdf-1.24.0-windows\mutool.exe .\
     - name: process caj
       shell: cmd
       run: |
